@@ -1,0 +1,58 @@
+﻿<h1 class="py-4">Products</h1>
+
+<div class="myclass row pb-4">
+  <div class="col-md-9">
+    <table class="table bg-white">
+      <thead class="thead-dark">
+        <tr>
+          <th>Image</th>
+          <th>Category</th>
+          <th style="width: 20%;">Title</th>
+          <th>Price</th>
+          <th>Discount Quantity</th>
+          <th>Discount (%)</th>
+          <th style="width: 10%;">Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; let i = index">
+          <td valign="middle"><img class="product-img" src="{{ product.image }}" width="100px" alt="image" /></td>
+          <td valign="middle">{{ product.category }}</td>
+          <td valign="middle" class="title-text">{{ product.title }}</td>
+          <td valign="middle">{{ product.price }}</td>
+          <td valign="middle">{{ product.discountSlab }}</td>
+          <td valign="middle">{{ product.discountPercent }}</td>
+          <td valign="middle" ><input class="form-control" type="number" min="0" maxlength="4"  [(ngModel)]="product.quantity" (change)="handelQuantity()" /></td>
+        </tr>
+        <tr *ngIf="!products">
+          <td colspan="7" class="text-center">
+            <span class="spinner-border spinner-border-lg align-center"></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card">
+      <div></div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <span class="cart-span">Cart Total Details:</span><br>
+          <span class="cart-span" >Total quantity:{{ total_qty }}</span><br>
+          <span class="cart-span-total">Total : {{ total_price }}</span>
+        </li>
+        <li class="list-group-item">
+          <span class="cart-span">Payment Selection : </span>
+          <label class="label-container"><input type="radio" name="payment" /> Stripe </label> &nbsp;
+          <label class="label-container"><input type="radio" name="payment" /> Paypal </label>
+        </li>
+        <li class="list-group-item">
+          <span class="cart-span">Date Of Delivery: </span>
+          <ngx-datepicker [(ngModel)]="date"></ngx-datepicker>
+        </li>
+      </ul>
+    </div>
+    <button type="submit" (click)="onOrderSubmit()" class="btn btn-primary mt-4 w-full">Submit</button>
+  </div>
+</div>

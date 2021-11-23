@@ -1,0 +1,9 @@
+input {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.invalid-feedback {
+    margin-left: 15%;
+    position: relative;
+}

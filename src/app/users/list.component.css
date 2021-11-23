@@ -1,0 +1,9 @@
+.container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.product-img {
+  width: 100px;
+  height: auto;
+  margin: 20px 0;
+}

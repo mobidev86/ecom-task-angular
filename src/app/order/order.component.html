@@ -1,0 +1,29 @@
+﻿<h1 class="py-4">Orders</h1>
+
+<div class="myclass row pb-4">
+  <div class="col-md-12">
+    <table class="table bg-white">
+      <thead class="thead-dark">
+        <tr>
+          <th>Order ID</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th style="width: 15%">Order Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order._id }}</td>
+          <td>{{ order.createdAt }}</td>
+          <td>{{ order.status }}</td>
+          <td>{{ order.total }}</td>
+        </tr>
+        <tr *ngIf="!orders">
+          <td colspan="4" class="text-center">
+            <span class="spinner-border spinner-border-lg align-center"></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

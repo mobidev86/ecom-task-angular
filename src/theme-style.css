@@ -1,0 +1,111 @@
+@import url(https://startbootstrap.github.io/startbootstrap-sb-admin-2/css/sb-admin-2.min.css);
+
+alert {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 70px;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Login */
+.login-bg {
+    background-image: url(assets/images/login-bg.png);
+    height: 100vh;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+
+.login-bg:after {
+    content: "";
+    width: 100%;
+    display: flex;
+    background-color: rgba(255,255,255,.4);
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.login-container {
+    background-color: rgba(255,255,255,.7);
+    padding: 100px;
+    max-width: 650px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    left: 100px;
+}
+
+.form-group label {
+    bottom: 34px;
+    left: 15px;
+    position: relative;
+    background-color: white;
+    padding: 0px 5px 0px 5px;
+    font-size: 1.1em;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+.form-control:focus~label {
+    bottom: 55px;
+}
+
+.form-control:valid~label {
+    bottom: 55px;
+}
+
+/* Date Picker */
+.datepicker-blue .calendar-container {
+    background: #32a8e4;
+    border: 1px solid #32a8e4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .3);
+    top: 35px;
+    left: 0;
+    font-weight: 700;
+}
+.datepicker-blue .month-year-text {
+    color: #fff;
+}
+.datepicker-blue .control path {
+    fill: #eff1f5;
+}
+.datepicker-blue .control path:hover path {
+    fill: #fff;
+}
+.datepicker-blue .day-name-unit {
+    color: #fafafa;
+}
+.datepicker-blue .day-unit, 
+.datepicker-blue .year-unit {
+    color: #fff;
+}
+.datepicker-blue .day-unit.is-prev-month, 
+.datepicker-blue .year-unit.is-prev-month {
+    color: #8ed0f0;
+}
+.datepicker-blue .day-unit.is-today, 
+.datepicker-blue .year-unit.is-today {
+    background: #8ed0f0;
+}
+.datepicker-blue .day-unit:hover, 
+.datepicker-blue .year-unit:hover, 
+.datepicker-blue .day-unit.is-selected, 
+.datepicker-blue .year-unit.is-selected {
+    background: #fff;
+    color: #686669;
+}
+.datepicker-blue .day-unit.is-disabled, 
+.datepicker-blue .year-unit.is-disabled {
+    color: #aaa8ab;
+}
+.datepicker-blue .day-unit.is-disabled:hover, 
+.datepicker-blue .year-unit.is-disabled:hover {
+    background: transparent;
+}
